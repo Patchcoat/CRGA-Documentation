@@ -7,6 +7,7 @@ Installation
 ------------
 
 Download the release for your operating system and unzip it: https://github.com/Patchcoat/CRGA/releases/tag/0.1
+
 * Linking libraries in gcc: https://gcc.gnu.org/onlinedocs/gcc/Link-Options.html
   * specify a location with ``-L/directory/path/`` and link the library with ``-llibcrga.so``
 * Linking libraries with cmake: https://cmake.org/cmake/help/latest/command/target_link_libraries.html
