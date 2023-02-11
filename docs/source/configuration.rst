@@ -7,103 +7,103 @@ A struct which holds all of the configuration information used to draw things on
 
    .. c:var:: int window_width
 
-Width of the window.
+    Width of the window.
 
    .. c:var:: int window_height
 
-Height of the window.
+    Height of the window.
 
    .. c:var:: int fps
 
-Target FPS
+    Target FPS
 
    .. c:var:: char *title
 
-Window Title
+    Window Title
 
    .. c:var:: float tile_size
 
-Tile size (width and height) in pixels
+    Tile size (width and height) in pixels
 
    .. c:var:: int default_layer_width
 
-Default layer width, in number of tiles
+    Default layer width, in number of tiles
 
    .. c:var:: int default_layer_height
 
-Default layer height, in number of tiles
+    Default layer height, in number of tiles
 
    .. c:var:: Color default_foreground
 
-Default foreground tile color. Used for drawing text and tinting tilemap tiles.
+    Default foreground tile color. Used for drawing text and tinting tilemap tiles.
 
    .. c:var:: Color default_background
 
-Default background tile color.
+    Default background tile color.
 
    .. c:var:: uint8_t default_visibility
 
-Default tile visibility
+    Default tile visibility
 
    .. c:var:: CRLayer *world_layers
 
-Pointer to an array of world layers
+    Pointer to an array of world layers
 
-.. c:var:: size_t world_layer_count
+   .. c:var:: size_t world_layer_count
 
-Size of the world layer array
+    Size of the world layer array
 
    .. c:var:: CRLayer *ui_layers
 
-Pointer to an array of UI layers
+    Pointer to an array of UI layers
 
    .. c:var:: size_t ui_layer_count
 
-Size of the UI layer array
+    Size of the UI layer array
 
    .. c:var:: CRMask *masks
 
-Pointer to an array of layer masks
+    Pointer to an array of layer masks
 
    .. c:var:: size_t mask_count
 
-Size of the mask array
+    Size of the mask array
 
    .. c:var:: Camera2D main_camera
 
-Main camera struct
+    Main camera struct
 
    .. c:var:: Color background_color
 
-Background color of the screen
+    Background color of the screen
 
    .. c:var:: CRCharIndexAssoc char_index_assoc[255]
 
-Character-to-index association array
+    Character-to-index association array
 
    .. c:var:: CRCharIndexAssoc *assocs
 
-Pointer to an array of additional character-to-index associations beyond the first 255
+    Pointer to an array of additional character-to-index associations beyond the first 255
 
    .. c:var:: size_t assoc_count
 
-Size of the assocs array
+    Size of the assocs array
 
    .. c:var:: Font *fonts
 
-Pointer to an array of font structs
+    Pointer to an array of font structs
 
    .. c:var:: size_t font_count
 
-Size of the font array
+    Size of the font array
 
    .. c:var:: CRTilemap *tilemaps
 
-Pointer to an array of tilemaps
+    Pointer to an array of tilemaps
 
    .. c:var:: size_t tilemap_count
 
-Size of the tilemap array
+    Size of the tilemap array
 
 .. c:function:: void CRSetCharacterAssoc(char *character, int index)
 
