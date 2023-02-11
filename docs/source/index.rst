@@ -22,3 +22,8 @@ Contents
    cleanup
    loop
    tiles
+   layers
+   entities
+   masking
+   drawing
+   camera

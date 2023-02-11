@@ -3,6 +3,41 @@ Loop
 
 To help developers get up and running as quickly as possible, CRGA provides a ready-made loop called :c:expr:`CRLoop()`, described below. Users may keep this around as long as they want, but it's recommended that one switches to a custom loop once it becomes simpler to do so. To facilitate this and make the transition as smooth as possible, the entirety of :c:expr:`CRLoop()` is provided below.
 
+.. code-block:: c
+
+    void CRLoop() {
+        while (!WindowShouldClose()) {
+    
+            if (CRPreDraw != 0)
+                (*CRPreDraw)();
+    
+            BeginDrawing();
+    
+                ClearBackground(cr_config->background_color);
+    
+                BeginMode2D(cr_config->main_camera);
+    
+                    for (int i = 0; i < cr_config->world_layer_count; i++) {
+                        CRDrawLayer(&cr_config->world_layers[i]);
+                    }
+                    if (CRWorldDraw != 0)
+                        (*CRWorldDraw)();
+    
+                EndMode2D();
+    
+                for (int i = 0; i < cr_config->ui_layer_count; i++) {
+                    CRDrawLayer(&cr_config->ui_layers[i]);
+                }
+                if (CRUIDraw != 0)
+                    (*CRUIDraw)();
+    
+            EndDrawing();
+    
+            if (CRPostDraw != 0)
+                (*CRPostDraw)();
+        }
+    }
+
 .. c:function:: void CRLoop()
 
 Enter an infinite loop and draws the world and UI layers. It also calls four functions at specific points during the loop.
