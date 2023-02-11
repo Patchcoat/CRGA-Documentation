@@ -16,4 +16,9 @@ Contents
 .. toctree::
 
    getting_started
-   api
+   initilization
+   configuration
+   loading
+   cleanup
+   loop
+   tiles
