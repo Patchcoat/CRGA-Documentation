@@ -1,12 +1,16 @@
 Welcome to CRGA's documentation!
 ===================================
 
-Classic Rogelike Graphics API (CRGA) is a Raylib powered graphics API that speeds up the process of drawing grid-based rogelikes. The project can be found [here](https://github.com/Patchcoat/CRGA).
+.. code-block:: C
 
-Check out the :doc:`getting_started` section for further information, including
-how to :ref:`installation` the project.
+   //In the beginning, all you want are results.
+   //In the end, all you want is control.
 
-.. note::
+Classic Rogelike Graphics API (CRGA) is a Raylib powered graphics API that speeds up the process of drawing grid-based rogelikes. The project can be found `here <https://github.com/Patchcoat/CRGA>`_.
+
+If you're new, check out the :doc:`getting_started` section. 
+
+.. warning::
 
    This project is under active development. Expect bugs and breaking changes going forward.
 
@@ -17,6 +21,7 @@ Contents
 
    getting_started
    initilization
+   structs
    configuration
    loading
    cleanup

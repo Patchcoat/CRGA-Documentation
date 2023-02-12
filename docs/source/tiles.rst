@@ -1,39 +1,7 @@
 Tiles
 =====
 
-Tiles are the basic building blocks of the CRGA engine. A layer is built up of a sequence of tiles that are in turn drawn on screen.
-
-.. c:struct:: CRTile
-
-   The tile struct that holds all tile data. Every tile drawn to the screen has this data.
-   
-   .. c:union:: index
-
-   The tile index, used to determine what to draw. This can hold either an integer index for referencing a specific tile on a tilemap, or to hold a utf-8 character.
-
-        .. c:var:: char c[4]
-
-        utf-8 character index. If the character is smaller than 4 bytes, it is null terminated.
-
-        .. c:var:: int i
-
-        integer index.
-
-    .. c:var:: Vector2 shift
-
-    How much to shift the tile foreground, in pixels. Useful when a text character or tile doesn't center perfectly or when you want it to be slightly off center. Should not be used to move tiles more than their size.
-
-    .. c:var:: Color foreground_color
-
-    Text color if drawing a character, tint color if drawing from a tilemap.
-
-    .. c:var:: Color background_color
-
-    Color drawn behind the foreground, filling the entire tile.
-
-    .. c:var:: uint8_t visibility
-
-    How transparent the tile is. 255 is totally visible, 0 is totally transparent.
+Tiles are the basic building blocks of the CRGA engine. A layer is built up of a sequence of tiles that are in turn drawn on screen. For more information, read about the :c:expr:`CRTile` struct.
 
 .. c:function:: CRTile CRDefaultTileConfig(int index)
 
